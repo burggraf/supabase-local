@@ -7,6 +7,7 @@ export type Profile = {
   full_name?: string
   avatar_url?: string
   website?: string
+  metadata?: any
 }
 
 export async function getProfile(userId: string) {

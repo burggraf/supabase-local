@@ -176,6 +176,17 @@ export default function ProfilePage() {
               />
             </div>
 
+            <div className="space-y-2">
+              <Label htmlFor="website" className="text-foreground">Website</Label>
+              <Input
+                id="website"
+                value={profile?.website || ""}
+                onChange={(e) => setProfile({ ...profile!, website: e.target.value })}
+                placeholder="Your website URL"
+                className="bg-background text-foreground border-input"
+              />
+            </div>
+
             <Button type="submit" className="w-full" disabled={updating}>
               {updating ? "Updating..." : "Save Changes"}
             </Button>
