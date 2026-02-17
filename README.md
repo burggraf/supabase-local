@@ -68,6 +68,20 @@ Database schema is managed via Supabase migrations. You can find them in the `su
 - To create a new migration: `supabase migration new <name>`
 - To apply migrations: `supabase migration up` (handled automatically by `supabase start`)
 
+## Deployment (Backend)
+
+Follow these steps to deploy your local database schema and backend configuration to a production Supabase project:
+
+1.  **Create a Supabase Project**: Go to the [Supabase Dashboard](https://supabase.com/dashboard) and create a new project.
+2.  **Link your local project**: Run the following command in the project root and follow the prompts to link your local setup to the remote project:
+    ```bash
+    supabase link
+    ```
+3.  **Deploy changes**: Run the provided deployment script to push migrations and any edge functions:
+    ```bash
+    ./deploy-backend.sh
+    ```
+
 ## Testing
 
 Run the end-to-end tests with Playwright:
