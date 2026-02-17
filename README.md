@@ -1,73 +1,92 @@
-# React + TypeScript + Vite
+# Supabase + React + Vite Full-Stack Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, full-stack boilerplate using React, Vite, and Supabase for local-first development. This template includes a complete authentication system, user profiles, and a dashboard layout with a sidebar.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend**: [React 19](https://react.dev/), [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/)
+- **Backend/Database**: [Supabase](https://supabase.com/) (Local Development)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/), [Shadcn UI](https://ui.shadcn.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Forms**: [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/)
+- **Routing**: [React Router v7](https://reactrouter.com/)
+- **Testing**: [Playwright](https://playwright.dev/)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔐 **Full Authentication Flow**: Register, Login, Logout, Password Reset, and Password Recovery.
+- 👤 **User Profiles**: Profile management with data stored in Supabase.
+- 📊 **Dashboard Layout**: A responsive dashboard with a collapsible sidebar and theme switching.
+- 🌓 **Dark Mode**: Built-in support for light and dark themes.
+- 🛠️ **Local Development**: Fully local Supabase environment for rapid development.
+- ✅ **End-to-End Testing**: Pre-configured Playwright tests for auth and profile flows.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [Node.js](https://nodejs.org/) (v18 or later)
+- [pnpm](https://pnpm.io/)
+- [Docker](https://www.docker.com/) (Required for Supabase Local)
+- [Supabase CLI](https://supabase.com/docs/guides/cli)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Setup
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1.  **Clone the repository and install dependencies:**
+
+    ```bash
+    pnpm install
+    ```
+
+2.  **Initialize and start Supabase local backend:**
+
+    Make sure Docker is running, then execute:
+
+    ```bash
+    supabase init
+    supabase start
+    ```
+
+    *Note: If `supabase init` was already performed, you only need `supabase start`.*
+
+3.  **Environment Variables:**
+
+    The application is pre-configured to connect to the local Supabase instance. If you need to customize the connection, check your `.env` file (if applicable) or `src/lib/supabase.ts`.
+
+4.  **Run the development server:**
+
+    ```bash
+    pnpm dev
+    ```
+
+    The app will be available at `http://localhost:5173`.
+
+## Database Migrations
+
+Database schema is managed via Supabase migrations. You can find them in the `supabase/migrations` directory.
+
+- To create a new migration: `supabase migration new <name>`
+- To apply migrations: `supabase migration up` (handled automatically by `supabase start`)
+
+## Testing
+
+Run the end-to-end tests with Playwright:
+
+```bash
+pnpm test
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+For UI mode:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm exec playwright test --ui
 ```
+
+## Project Structure
+
+- `src/components`: UI components (including Shadcn components in `/ui`).
+- `src/hooks`: Custom React hooks.
+- `src/lib`: Utility functions and Supabase client initialization.
+- `src/pages`: Individual page components and routing logic.
+- `supabase/`: Local Supabase configuration and migrations.
+- `tests/`: Playwright E2E tests.
