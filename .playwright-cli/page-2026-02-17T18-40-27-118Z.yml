@@ -1,0 +1,55 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "MailpitMailpit" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - img "Mailpit" [ref=e6]
+      - text: Mailpit
+    - generic [ref=e9]:
+      - textbox "Search" [ref=e11]:
+        - /placeholder: Search mailbox
+      - button "" [ref=e12] [cursor=pointer]:
+        - generic [ref=e13]: 
+    - generic [ref=e14]:
+      - text: 
+      - combobox [ref=e15]:
+        - option "25"
+        - option "50" [selected]
+        - option "100"
+        - option "200"
+      - generic [ref=e16]: 1-1 of 1
+      - button "" [disabled]:
+        - generic: 
+      - button "" [disabled]:
+        - generic: 
+  - text:      
+  - generic [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e20]:
+        - button " Inbox 1" [ref=e21] [cursor=pointer]:
+          - generic [ref=e22]: 
+          - text: Inbox
+          - generic "Unread messages" [ref=e23]: "1"
+        - button " Mark all read" [ref=e24] [cursor=pointer]:
+          - generic [ref=e25]: 
+          - text: Mark all read
+        - button " Delete all" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: 
+          - text: Delete all
+      - generic [ref=e28]:
+        - button " About" [ref=e29] [cursor=pointer]:
+          - generic [ref=e30]: 
+          - text: About
+        - button "" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]: 
+        - button "" [ref=e33] [cursor=pointer]:
+          - generic [ref=e34]: 
+    - 'link "Admin To: markb@mantisbible.com Reset Your Password Reset password Follow this link to reset the password for your user: Reset password Alternatively, enter the code: 104298 844 B a few seconds ago" [ref=e38] [cursor=pointer]':
+      - /url: /view/SzjWtvhdbSaUbbg9oHqWoR
+      - generic [ref=e39]:
+        - generic [ref=e41]: Admin
+        - generic [ref=e43]: "To: markb@mantisbible.com"
+      - generic [ref=e44]:
+        - generic [ref=e45]: Reset Your Password
+        - generic [ref=e46]: "Reset password Follow this link to reset the password for your user: Reset password Alternatively, enter the code: 104298"
+      - generic [ref=e47]: 844 B
+      - generic [ref=e48]: a few seconds ago

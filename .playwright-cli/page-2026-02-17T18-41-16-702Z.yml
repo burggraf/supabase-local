@@ -1,0 +1,103 @@
+- generic [ref=e2]:
+  - generic [ref=e49]:
+    - link "MailpitMailpit" [ref=e51] [cursor=pointer]:
+      - /url: /
+      - img "Mailpit" [ref=e52]
+      - text: Mailpit
+    - generic [ref=e53]:
+      - text: 
+      - button " Mark unread" [ref=e54] [cursor=pointer]:
+        - generic [ref=e55]: 
+        - generic [ref=e56]: Mark unread
+      - button " Delete" [ref=e57] [cursor=pointer]:
+        - generic [ref=e58]: 
+        - text: Delete
+    - generic [ref=e59]:
+      - button " Download" [ref=e61] [cursor=pointer]:
+        - generic [ref=e62]: 
+        - text: Download
+      - link "":
+        - /url: /view/false
+        - generic: 
+      - link "":
+        - /url: /view/false
+        - generic "View next message": 
+  - generic [ref=e63]:
+    - generic [ref=e64]:
+      - button " Return to inbox" [ref=e66] [cursor=pointer]:
+        - generic [ref=e67]: 
+        - generic [ref=e68]: Return to inbox
+      - 'link "Admin a minute ago To: markb@mantisbible.com Reset Your Password" [ref=e71] [cursor=pointer]':
+        - /url: /view/SzjWtvhdbSaUbbg9oHqWoR
+        - strong [ref=e74]: Admin
+        - generic [ref=e75]: a minute ago
+        - generic [ref=e77]: "To: markb@mantisbible.com"
+        - generic [ref=e79]: Reset Your Password
+      - generic [ref=e80]:
+        - button " About" [ref=e81] [cursor=pointer]:
+          - generic [ref=e82]: 
+          - text: About
+        - button "" [ref=e83] [cursor=pointer]:
+          - generic [ref=e84]: 
+        - button "" [ref=e85] [cursor=pointer]:
+          - generic [ref=e86]: 
+    - generic [ref=e89]:
+      - table [ref=e92]:
+        - rowgroup [ref=e93]:
+          - row "From Admin <admin@email.com>" [ref=e94]:
+            - rowheader "From" [ref=e95]
+            - cell "Admin <admin@email.com>" [ref=e96]:
+              - generic [ref=e97]:
+                - text: Admin
+                - generic [ref=e98]:
+                  - text: <
+                  - link "admin@email.com" [ref=e99] [cursor=pointer]:
+                    - /url: /search?q=admin%40email.com
+                  - text: ">"
+          - row "To <markb@mantisbible.com>" [ref=e100]:
+            - rowheader "To" [ref=e101]
+            - cell "<markb@mantisbible.com>" [ref=e102]:
+              - generic [ref=e104]:
+                - text: <
+                - link "markb@mantisbible.com" [ref=e105] [cursor=pointer]:
+                  - /url: /search?q=markb%40mantisbible.com
+                - text: ">"
+          - row "Subject Reset Your Password" [ref=e106]:
+            - rowheader "Subject" [ref=e107]
+            - cell "Reset Your Password" [ref=e108]:
+              - strong [ref=e109]: Reset Your Password
+          - row "Date Tue, 17 Feb 2026, 10:40 am (844 B)" [ref=e110]:
+            - rowheader "Date" [ref=e111]
+            - cell "Tue, 17 Feb 2026, 10:40 am (844 B)" [ref=e112]
+          - row "Tags" [ref=e113]:
+            - rowheader "Tags" [ref=e114]
+            - cell [ref=e115]:
+              - combobox "Type a value" [ref=e118]
+      - tablist [ref=e119]:
+        - tab "HTML" [selected] [ref=e121] [cursor=pointer]
+        - tab "HTML Source" [ref=e122] [cursor=pointer]
+        - tab "Text" [ref=e123] [cursor=pointer]
+        - tab "Headers" [ref=e124] [cursor=pointer]
+        - tab "Raw" [ref=e125] [cursor=pointer]
+        - tab "HTML Check 100%" [ref=e126] [cursor=pointer]:
+          - text: HTML Check
+          - generic [ref=e127]: 100%
+        - tab "Link Check" [ref=e128] [cursor=pointer]
+        - generic [ref=e129]:
+          - button "" [ref=e130] [cursor=pointer]:
+            - generic [ref=e131]: 
+          - button "" [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]: 
+          - button "" [disabled]:
+            - generic: 
+      - generic [ref=e134]:
+        - tabpanel "HTML" [ref=e135]:
+          - iframe [ref=e137]:
+            - generic [active] [ref=f2e1]:
+              - heading "Reset password" [level=2] [ref=f2e2]
+              - paragraph [ref=f2e3]: "Follow this link to reset the password for your user:"
+              - paragraph [ref=f2e4]:
+                - link "Reset password" [ref=f2e5] [cursor=pointer]:
+                  - /url: http://127.0.0.1:54321/auth/v1/verify?token=fc020de217bbfc93845e8d0aff1668d7254a6b260b6387c0a1fd472e&type=recovery&redirect_to=http://localhost:5173/reset-password
+              - paragraph [ref=f2e6]: "Alternatively, enter the code: 104298"
+        - text:         

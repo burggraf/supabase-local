@@ -1,0 +1,26 @@
+- generic [ref=e18]:
+  - button "Toggle theme" [ref=e20] [cursor=pointer]:
+    - img
+    - generic [ref=e21]: Toggle theme
+  - generic [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e24]: Login
+      - generic [ref=e25]: Enter your email and password to access your account.
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - text: Email
+          - textbox "Email" [ref=e29]:
+            - /placeholder: m@example.com
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - generic [ref=e32]: Password
+            - link "Forgot password?" [ref=e33] [cursor=pointer]:
+              - /url: /recovery
+          - textbox "Password" [ref=e34]
+      - generic [ref=e35]:
+        - button "Login" [ref=e36] [cursor=pointer]
+        - generic [ref=e37]:
+          - text: Don't have an account?
+          - link "Register" [ref=e38] [cursor=pointer]:
+            - /url: /register

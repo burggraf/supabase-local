@@ -1,0 +1,61 @@
+- generic [ref=e39]:
+  - generic [ref=e42]:
+    - list [ref=e44]:
+      - listitem [ref=e45]:
+        - button "Acme Corp Enterprise Plan" [ref=e46] [cursor=pointer]:
+          - img [ref=e48]
+          - generic [ref=e51]:
+            - generic [ref=e52]: Acme Corp
+            - generic [ref=e53]: Enterprise Plan
+          - img [ref=e54]
+    - generic [ref=e58]:
+      - generic [ref=e59]: Application
+      - list [ref=e61]:
+        - listitem [ref=e62]:
+          - link "Dashboard" [ref=e63] [cursor=pointer]:
+            - /url: /dashboard
+            - img [ref=e64]
+            - generic [ref=e69]: Dashboard
+        - listitem [ref=e70]:
+          - link "Settings" [ref=e71] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e72]
+            - generic [ref=e75]: Settings
+    - list [ref=e77]:
+      - listitem [ref=e78]:
+        - button "Toggle theme" [ref=e79] [cursor=pointer]:
+          - img
+          - generic [ref=e80]: Toggle theme
+      - listitem [ref=e81]:
+        - button "Mark Burggraf Mark Burggraf markb@mantisbible.com" [ref=e82] [cursor=pointer]:
+          - img "Mark Burggraf" [ref=e84]
+          - generic [ref=e85]:
+            - generic [ref=e86]: Mark Burggraf
+            - generic [ref=e87]: markb@mantisbible.com
+          - img [ref=e88]
+  - main [ref=e91]:
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - button "Toggle Sidebar" [ref=e94] [cursor=pointer]:
+          - img
+          - generic [ref=e95]: Toggle Sidebar
+        - generic [ref=e97]: Dashboard
+      - main [ref=e98]:
+        - generic [ref=e99]:
+          - heading "Welcome, markb@mantisbible.com" [level=1] [ref=e100]
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - generic [ref=e104]: Total Users
+                - generic [ref=e105]: All-time users in the system
+              - paragraph [ref=e107]: 1,234
+            - generic [ref=e108]:
+              - generic [ref=e109]:
+                - generic [ref=e110]: Active Subscriptions
+                - generic [ref=e111]: Active billing cycles
+              - paragraph [ref=e113]: "567"
+            - generic [ref=e114]:
+              - generic [ref=e115]:
+                - generic [ref=e116]: Open Issues
+                - generic [ref=e117]: Pending tasks and bugs
+              - paragraph [ref=e119]: "12"
